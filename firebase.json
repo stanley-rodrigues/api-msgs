@@ -1,0 +1,44 @@
+{
+    "functions": {
+        "runtime": "nodejs22",
+        "source": ".",
+        "predeploy": "npm run build",
+        "project": "default",
+        "codebase": "example-client"
+    },
+    "hosting": {
+        "site": "example-client",
+        "public": "lib",
+        "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+        ],
+        "rewrites": [
+            {
+                "source": "**",
+                "function": "server",
+                "region": "southamerica-east1",
+                "pintag": true
+            }
+        ]
+    },
+    "emulators": {
+        "hosting": {
+            "port": 3000
+        },
+        "ui": {
+            "port": 3001
+        },
+        "firestore": {
+            "port": 3002
+        },
+        "pubsub": {
+            "port": 3003
+        },
+        "functions": {
+            "port": 3004
+        },
+        "singleProjectMode": true
+    }
+}

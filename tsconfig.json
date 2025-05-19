@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "module": "Preserve",
+        "moduleResolution": "Bundler",
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "outDir": "lib",
+        "sourceMap": true,
+        "strict": true,
+        "target": "es2017",
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "incremental": true,
+        "paths": {}
+    },
+    "compileOnSave": true,
+    "include": ["src"]
+}
